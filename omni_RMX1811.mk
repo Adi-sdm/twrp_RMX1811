@@ -17,7 +17,8 @@
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
 
-$(call inherit-product, build/target/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
